@@ -1,5 +1,18 @@
-# **Hasham Documentation**
+██╗  ██╗ █████╗ ███████╗██╗  ██╗ █████╗ ███╗   ███╗
+██║  ██║██╔══██╗██╔════╝██║  ██║██╔══██╗████╗ ████║
+███████║███████║███████╗███████║███████║██╔████╔██║
+██╔══██║██╔══██║╚════██║██╔══██║██╔══██║██║╚██╔╝██║
+██║  ██║██║  ██║███████║██║  ██║██║  ██║██║ ╚═╝ ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+═══════════════════════════════════════════════════
+   SHA-256 File Hashing in Python  · SkillMe Week 1
+   Internship Project.
+   One tiny change, a completely different hash
+═══════════════════════════════════════════════════
+                          By: odegejr
+                          Socials: @odegejrofficial
 
+# **Hasham Documentation**
 Hasham Python script calculates cryptographic hashes for text or binary files in a folder. It reads each file in 4096-byte chunks so it uses a small amount of memory even for large files.
 
 ## DISCLAIMER || Legal and Ethical use.
