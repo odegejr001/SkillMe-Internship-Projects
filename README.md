@@ -1,3 +1,4 @@
+```text
 ██╗  ██╗ █████╗ ███████╗██╗  ██╗ █████╗ ███╗   ███╗
 ██║  ██║██╔══██╗██╔════╝██║  ██║██╔══██╗████╗ ████║
 ███████║███████║███████╗███████║███████║██╔████╔██║
@@ -5,12 +6,13 @@
 ██║  ██║██║  ██║███████║██║  ██║██║  ██║██║ ╚═╝ ██║
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
 ═══════════════════════════════════════════════════
-   SHA-256 File Hashing in Python  · SkillMe Week 1
+   SHA-256 File Hashing in Python · SkillMe Week 1
    Internship Project.
    One tiny change, a completely different hash
 ═══════════════════════════════════════════════════
                           By: odegejr
                           Socials: @odegejrofficial
+```
 
 # **Hasham Documentation**
 Hasham Python script calculates cryptographic hashes for text or binary files in a folder. It reads each file in 4096-byte chunks so it uses a small amount of memory even for large files.
@@ -64,4 +66,4 @@ Other platforms can use:
 sha256sum test_folder/bravo.txt
 ```
 
-Both commands would return the same hexadecimal digest as the script. Making the script valid
+Both commands would return the same hexadecimal digest as the script.
