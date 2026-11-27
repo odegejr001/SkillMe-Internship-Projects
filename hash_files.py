@@ -11,7 +11,6 @@ SNAPSHOT_FILE = Path(__file__).with_name(".hash_snapshot.json")
 
 
 def hash_file(path, algorithm="sha256"):
-    """Reads the path in binary chunks and return its hexadecimal digest."""
     hasher = hashlib.new(algorithm)
     with open(path, "rb") as file:
         while chunk := file.read(CHUNK_SIZE):
