@@ -57,4 +57,4 @@ Linux
 sha256sum test_folder/bravo.txt
 ```
 
-Both commands would return the same hexadecimal digest as the script.
+Both commands would return the same hexadecimal digest as the script would for thesame file
