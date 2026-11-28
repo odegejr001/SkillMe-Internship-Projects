@@ -17,14 +17,19 @@
 # **Hasham Documentation**
 Hasham Python script calculates cryptographic hashes for text or binary files in a folder. It reads each file in 4096-byte chunks so it uses a small amount of memory even for large files.
 
-## DISCLAIMER || Legal and Ethical use.
+## DISCLAIMER || Legal and Ethical Use
 
-**Scanning or attacking systems you do not own or do not have written permission to test is illegal.** This tool only monitors files in this workspace's own `test_folder`; use it on test data you control.
+**Only use this project on files and folders you own or are explicitly authorized to monitor.** Scanning, modifying, or monitoring systems without permission may violate local laws, organizational policies, or contracts. This tool is provided strictly for authorized cybersecurity education and defensive integrity checking in this workspace.
+
+- Do not test or monitor another person's data without written permission.
+- Keep test files local and avoid collecting unrelated personal or sensitive data.
+- Use the results to detect changes, not to access or disclose protected information.
 
 ## Files
 
-- `hash_files.py` — hashes every file in the selected folder and compares the result with the previous run.
-- `test_folder/` — contains six small text files for testing.
+- `hash_files.py` — hashes every file in a selected folder and compares results with the previous saved snapshot.
+- `filewatch.py` — continuously watches a folder and reports `NEW`, `UNCHANGED`, or `CHANGED` hashes using `hash_file()`.
+- `test_folder/` — contains small text files for authorized testing.
 - `.hash_snapshot.json` — automatically stores the previous hashes outside `test_folder`.
 
 ## Run
@@ -66,3 +71,20 @@ Changing even a small part of `bravo.txt` causes a completely different SHA-256 
 ![SHA-256 avalanche effect demonstration for bravo.txt](<Screenshot 2026-11-28 023232.png>)
 
 The screenshot demonstrates that the original and modified versions of `bravo.txt` have unrelated-looking 64-character hashes, even though the file contents differ only slightly.
+
+## File Watcher
+
+Run the continuous file watcher:
+
+```powershell
+python filewatch.py
+```
+
+It watches `test_folder` with SHA-256. Press `Ctrl+C` to stop it. To choose another folder, algorithm, or polling interval:
+
+```powershell
+python filewatch.py test_folder --algorithm sha256 --interval 1
+python filewatch.py test_folder --algorithm sha1
+```
+
+The watcher is a demonstration of defensive file integrity monitoring. It compares hashes observed during consecutive polls; it does not identify which person or process made a change.
