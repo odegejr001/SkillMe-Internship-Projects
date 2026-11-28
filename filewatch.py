@@ -7,7 +7,7 @@ CHUNK_SIZE = 4096
 
 
 def hash_file(path, algorithm="sha256"):
-    """Return a hexadecimal hash for a file."""
+    
     hasher = hashlib.new(algorithm)
     with open(path, "rb") as file:
         while chunk := file.read(CHUNK_SIZE):
@@ -16,7 +16,6 @@ def hash_file(path, algorithm="sha256"):
 
 
 def filewatch(folder="test_folder", algorithm="sha256", interval=1):
-    """Monitor files and report changed hashes until interrupted."""
     folder = Path(folder)
     if not folder.exists():
         print(f"Error: folder not found: {folder}")
