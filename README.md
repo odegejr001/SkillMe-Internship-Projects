@@ -58,3 +58,11 @@ sha256sum test_folder/bravo.txt
 ```
 
 Both commands would return the same hexadecimal digest as the script would for thesame file
+
+## Avalanche effect on `bravo.txt`
+
+Changing even a small part of `bravo.txt` causes a completely different SHA-256 digest. This is the avalanche effect: a tiny input change produces widespread, seemingly random-looking changes in the output.
+
+![SHA-256 avalanche effect demonstration for bravo.txt](<Screenshot 2026-11-28 023232.png>)
+
+The screenshot demonstrates that the original and modified versions of `bravo.txt` have unrelated-looking 64-character hashes, even though the file contents differ only slightly.

@@ -1,1 +1,2 @@
 A one-character change should create a totally different hash.
+I just added this
